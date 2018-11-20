@@ -11,7 +11,7 @@ Evolutionary algorithms are a group of naturally inspired metaheuristic optimiza
 This project offers implementations of the following algorithms: 
 * Generation GA (genetic algorithm)
 * Eliminaton GA (genetic algorithm)
-* differential evolution
+* Differential evolution
 * NSGA (Non-Dominated Sorting Genetic Algoritm)
 * CLONALG (Clonal Selection Algorithm)
 * PSO (Partical swarm optimization)
