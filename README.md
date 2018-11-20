@@ -19,7 +19,7 @@ This project offers implementations of the following algorithms:
 ## Use of the library
 Since there are several different algorithms available we will not show how to use all of them, but will use the elimination genetic algorithm as a show case. 
 Let's say you wish to find the minimum of the ackley function. 
-![ackley](images/ackley.png)
+![ackley](images/Ackley.png)
 
 In order to solve this problem you have decided to use the following strategies:
 * SOLUTION REPRESENTATION: double array,
