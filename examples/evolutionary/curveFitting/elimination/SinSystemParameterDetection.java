@@ -59,7 +59,7 @@ public class SinSystemParameterDetection {
 		//Function to optimize
 		SinFunction sinFunction = new SinFunction();
 		int variableNumber = sinFunction.getCoefficientCount();
-		double[][] systemMatrix = DataSetLoader.loadMatrix(new File(System.getProperty("user.dir"),"data/algorithm-examples/sin-data.txt"));
+		double[][] systemMatrix = DataSetLoader.loadMatrix(new File(System.getProperty("user.dir"),"data/sin-data.txt"));
 		FunctionCallCounterWrapper<double[]> function =  new FunctionCallCounterWrapper<>(
 				new PrototypeBasedSystemLossFunction(systemMatrix,sinFunction,new SquareErrorFunction())
 				);

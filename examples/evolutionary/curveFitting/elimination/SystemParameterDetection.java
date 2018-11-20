@@ -85,7 +85,7 @@ public class SystemParameterDetection {
 		));
 
 		//Function to optimize
-		List<String> lines = Files.readAllLines(new File(System.getProperty("user.dir"),"data/algorithm-examples/system-dataset.txt").toPath());
+		List<String> lines = Files.readAllLines(new File(System.getProperty("user.dir"),"data/system-dataset.txt").toPath());
 		double[][] systemMatrix = parse(lines);
 		FunctionCallCounterWrapper<double[]> function =  new FunctionCallCounterWrapper<>(new PrototypeBasedSystemLossFunction(systemMatrix,new APrototypeFunction(5) {
 			

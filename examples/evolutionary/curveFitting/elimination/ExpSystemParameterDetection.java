@@ -58,7 +58,7 @@ public class ExpSystemParameterDetection {
 		//Function to optimize
 		ExpFunction expFunction = new ExpFunction();
 		int variableNumber = expFunction.getCoefficientCount();
-		double[][] systemMatrix = DataSetLoader.loadMatrix(new File(System.getProperty("user.dir"),"data/algorithm-examples/exp-data.txt"));
+		double[][] systemMatrix = DataSetLoader.loadMatrix(new File(System.getProperty("user.dir"),"data/exp-data.txt"));
 		FunctionCallCounterWrapper<double[]> function =  new FunctionCallCounterWrapper<>(
 				new PrototypeBasedSystemLossFunction(systemMatrix,expFunction,new SquareErrorFunction())
 			);

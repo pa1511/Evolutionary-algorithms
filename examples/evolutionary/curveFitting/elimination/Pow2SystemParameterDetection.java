@@ -59,7 +59,7 @@ public class Pow2SystemParameterDetection {
 		//Function to optimize
 		Pow2Function pow2Function = new Pow2Function();
 		int variableNumber = pow2Function.getCoefficientCount();
-		double[][] systemMatrix = DataSetLoader.loadMatrix(new File(System.getProperty("user.dir"),"data/algorithm-examples/pow2-data.txt"));
+		double[][] systemMatrix = DataSetLoader.loadMatrix(new File(System.getProperty("user.dir"),"data/pow2-data.txt"));
 		FunctionCallCounterWrapper<double[]> function =  new FunctionCallCounterWrapper<>(
 				new PrototypeBasedSystemLossFunction(systemMatrix,pow2Function,new SquareErrorFunction())
 		);

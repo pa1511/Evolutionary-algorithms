@@ -55,7 +55,7 @@ public class LinearNoiseSystemParameterDetection {
 		//Function to optimize
 		LinearFunction linearFunction = new LinearFunction();
 		int variableNumber = linearFunction.getCoefficientCount();
-		double[][] systemMatrix = DataSetLoader.loadMatrix(new File(System.getProperty("user.dir"),"data/algorithm-examples/linear-noise-data.txt"));
+		double[][] systemMatrix = DataSetLoader.loadMatrix(new File(System.getProperty("user.dir"),"data/linear-noise-data.txt"));
 		FunctionCallCounterWrapper<double[]> function =  new FunctionCallCounterWrapper<>(
 				new PrototypeBasedSystemLossFunction(systemMatrix,linearFunction,new SquareErrorFunction())
 				);

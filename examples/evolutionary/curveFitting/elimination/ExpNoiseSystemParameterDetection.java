@@ -60,7 +60,7 @@ public class ExpNoiseSystemParameterDetection {
 		int variableNumber = expFunction.getCoefficientCount();
 
 		double[][] systemMatrix = DataSetLoader.loadMatrix(
-					new File(System.getProperty("user.dir"),"data/algorithm-examples/exp-noise-data.txt")
+					new File(System.getProperty("user.dir"),"data/exp-noise-data.txt")
 				);
 		FunctionCallCounterWrapper<double[]> function =  new FunctionCallCounterWrapper<>(
 				new PrototypeBasedSystemLossFunction(systemMatrix,expFunction,new SquareErrorFunction())

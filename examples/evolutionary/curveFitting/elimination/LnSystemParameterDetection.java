@@ -59,7 +59,7 @@ public class LnSystemParameterDetection {
 		//Function to optimize
 		LnFunction lnFunction = new LnFunction();
 		int variableNumber = lnFunction.getCoefficientCount();
-		double[][] systemMatrix = DataSetLoader.loadMatrix(new File(System.getProperty("user.dir"),"data/algorithm-examples/log-data.txt"));
+		double[][] systemMatrix = DataSetLoader.loadMatrix(new File(System.getProperty("user.dir"),"data/log-data.txt"));
 		FunctionCallCounterWrapper<double[]> function =  new FunctionCallCounterWrapper<>(
 				new PrototypeBasedSystemLossFunction(systemMatrix,lnFunction,new SquareErrorFunction())
 				);

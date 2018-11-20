@@ -59,7 +59,7 @@ public class TanSystemParameterDetection {
 		//Function to optimize
 		TanFunction tanFunction = new TanFunction();
 		int variableNumber = tanFunction.getCoefficientCount();
-		double[][] systemMatrix = DataSetLoader.loadMatrix(new File(System.getProperty("user.dir"),"data/algorithm-examples/tan-data.txt"));
+		double[][] systemMatrix = DataSetLoader.loadMatrix(new File(System.getProperty("user.dir"),"data/tan-data.txt"));
 		FunctionCallCounterWrapper<double[]> function =  new FunctionCallCounterWrapper<>(
 				new PrototypeBasedSystemLossFunction(systemMatrix,tanFunction,new SquareErrorFunction())
 		);
