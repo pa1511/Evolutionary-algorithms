@@ -49,7 +49,7 @@ public class OX2Crossing extends AbstractCrossing<IntegerArraySolution>{
 
 	@Override
 	public void cross(@Nonnull IntegerArraySolution[] chromosomes,@Nonnull IntegerArraySolution[] newChromosomesHolder) {
-		PStreams.forEachIndexIn(newChromosomesHolder.length, parallel,j->ox2Crossing.apply(chromosomes).apply(newChromosomesHolder));
+		PStreams.forEachIndexIn(newChromosomesHolder.length, parallel,ox2Crossing.apply(chromosomes).apply(newChromosomesHolder));
 	}
 
 	private @Nonnull int[] createChildContent(@Nonnull int[] parent1Content,@Nonnull  int[] parent2Content,@Nonnull  int[] selectedIndexes) {
@@ -59,7 +59,7 @@ public class OX2Crossing extends AbstractCrossing<IntegerArraySolution>{
 		int selectedToTake = 0;
 		for(int i=0; i<childContent.length;i++){
 			if(chromosomeInOtherParentOnSelectedIndex(parent1Content[i],parent2Content,selectedIndexes)){
-				childContent[i] = parent2Content[selectedIndexes[selectedToTake]];
+				childContent[i] = parent2Content[selectedIndexes[selectedToTake]];//TODO: got an array out of bounds here
 				selectedToTake++;
 			}
 			else{
